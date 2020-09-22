@@ -2,7 +2,7 @@ import React from 'react';
 import Navigationbar from "./components/NavigationBar"
 import WelcomeBody from "./components/WelcomeBody"
 import Networkspage from "./components/networkspage"
-
+import Facebook from "./pages/facebook"
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,6 +22,9 @@ function App() {
           </Route>
           <Route path="/networks">
             <Networkspage/>
+          </Route>
+          <Route path="/facebook">
+            <Facebook/>
           </Route>
         </Switch>
      </Router>
