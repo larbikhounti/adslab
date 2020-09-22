@@ -1,23 +1,33 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Facebook from '@material-ui/icons/Facebook';
-import Pinterest from '@material-ui/icons/Pinterest';
-import Twitter from '@material-ui/icons/Twitter';
-import Instagram from '@material-ui/icons/Instagram';
 
-import ListItemText from '@material-ui/core/ListItemText';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
+const goTo = (event)=>{
+
+ let choose = event.target
+ console.log(choose.textContent)
+ window.location.href = `./${choose.textContent}`;
+}
+
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    textAlign: "center",   
-    marginTop :"5em",
-    alignContent :"center",
-    textAign: "center"
+    display: "flex",
+    flexDirection : "row",
+    justContent : "space-in-between",
+    justifyContent: "center",
+    justifyContent: "space-around",
+    height : "10em"
+    
+  },
+  root2: {
+    display: "flex",
+    flexDirection : "column",
+    justContent : "space-in-between",
+    justifyContent: "center",
+    width : "100%",
+    height : "15em",
     
     
   },
@@ -27,19 +37,28 @@ const useStyles = makeStyles((theme) => ({
      fontWeight : 700,
      marginTop : "1em",
      color : "#1D3557",
+     paddingBottom: "1.5em"
   },
   item:{
-     justifySelf : "center",
-     backgroundColor : "#FFFFFF",
-     width : "10em",
-    height : "5em",
-    marginTop: "1em",
-    paddingTop: "1em",
-    border:"1px solid #707070",
-    fontWeight : 700,
-    
-    
-
+    alignSelf: "center",
+    fontSize: "medium",
+    fontWeight: 700,
+    padding: "2em",
+    border: "1px solid grey",
+    backgroundColor : "white",
+    cursor : "pointer"
+  },
+  item2:{
+   
+    textAlign  : "center",
+    alignSelf: "center",
+    fontSize: "medium",
+    fontWeight: 700,
+    padding: "1em",
+    width:"100%",
+    border: "1px solid grey",
+    backgroundColor : "white",
+    cursor : "pointer"
   },
   socialaconainer :{
     
@@ -47,7 +66,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: '-webkit-center',
     
     
-  }
+  },
+
  
 
 }));
@@ -55,65 +75,29 @@ const useStyles = makeStyles((theme) => ({
 
 
 function Networkspage() {
+  const matches = useMediaQuery('(min-width:600px)');
+  console.log(matches)
   const classes = useStyles();  
   return (
     <div className="App">
         <Typography  className={classes.descreption} variant="h3">
         Choose A Network
         </Typography>
-        <Grid container className={classes.root} >
-            <Grid className={classes.socialaconainer}  item xs={12} md={3} lg={3} xl={3} >
-            <div className={classes.item}>
-            <List>
-            <ListItem button>
-            <ListItemIcon>
-            <Facebook color="primary"/>
-            </ListItemIcon>
-             <ListItemText primary="facebook" />
-            </ListItem>
-            </List>
-            </div>
-            </Grid>
-            <Grid className={classes.socialaconainer} item xs={12} md={3} lg={3} xl={3} >
-            <div className={classes.item}>
-            <List>
-            <ListItem button>
-            <ListItemIcon>
-            <Pinterest  color="secondary" />
-            </ListItemIcon>
-             <ListItemText primary="Pinterest" />
-            </ListItem>
-            </List>
-            </div>
-            </Grid>
-            <Grid className={classes.socialaconainer}  item xs={12} md={3} lg={3} xl={3} >
-            <div className={classes.item}>
-            <List>
-            <ListItem button>
-            <ListItemIcon>
-            <Twitter style={{color:"#76A9EA"}}/>
-            </ListItemIcon>
-             <ListItemText primary="Twitter" />
-            </ListItem>
-            </List> 
-            </div>
-            </Grid>
-            <Grid  className={classes.socialaconainer}  item xs={12} md={3} lg={3} xl={3} >
-            <div className={classes.item}>
-            <List>
-            <ListItem button>
-            <ListItemIcon>
-            <Instagram  style={{color:"#EAB3CC"}} />
-            </ListItemIcon>
-             <ListItemText primary="Instagram" />
-            </ListItem>
-            </List> 
-            </div>
-            </Grid>
-    
-
-        </Grid>
-    </div>
+        
+          {matches?<div className={classes.root}>
+          <p onClick ={goTo} className= {classes.item}>Facebook</p>
+          <p onClick ={goTo}  className= {classes.item}>Instagram</p>
+          <p onClick ={goTo}  className= {classes.item}>twitter</p>
+          <p onClick ={goTo}  className= {classes.item}>pintrest</p>
+          </div> : <div className={classes.root2}> 
+           <p onClick ={goTo} className= {classes.item2}>Facebook</p>
+           <p onClick ={goTo}  className= {classes.item2}>Instagram</p>
+           <p onClick ={goTo}  className= {classes.item2}>twitter</p>
+           <p onClick ={goTo}  className= {classes.item2}>pintrest</p> </div>}
+          
+       
+        </div>
+  
   );
 }
 

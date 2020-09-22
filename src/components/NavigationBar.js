@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      width: "100%",
+      height : "2em"
       
     },
     menuButton: {
@@ -20,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "30px"
     },
     appBar : {
-        backgroundColor : '#E63946'
+        backgroundColor : '#E63946',
+        
     }
   }));
   
