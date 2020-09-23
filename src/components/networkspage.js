@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection : "row",
-    justContent : "space-in-between",
+    //justContent : "space-in-between",
     justifyContent: "center",
     justifyContent: "space-around",
     height : "10em"

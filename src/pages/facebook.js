@@ -71,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
   image: {
     width: "100%",
     height: "100%",
+    maxHeight : "400px",
     backgroundSize: "cover"
   },
   footer : {
@@ -100,11 +101,31 @@ const useStyles = makeStyles((theme) => ({
 
 function Facebook() {
   let [url, setUrl] = useState("");
+  let [username, setUsername] = useState("");
+  let [descreption, setDescreption] = useState("");
+  let [shortcta, setShortcta] = useState("");
+  let [buttontext, setButtontext] = useState("");
+  let [websitename, setWebsitename] = useState("");
   const classes = useStyles();
-  const saveimage = (event) => {
 
+  const saveimage = (event) => {
     console.log(URL.createObjectURL(event.target.files[0]))
     setUrl(URL.createObjectURL(event.target.files[0]))
+  }
+  const adduername = (event) => {
+    setUsername(event.target.value)
+  }
+  const adddescreption= (event) => {
+    setDescreption(event.target.value)
+  }
+  const addshortcta= (event) => {
+    setShortcta(event.target.value)
+  }
+  const addurl= (event) => {
+    setWebsitename(event.target.value)
+  }
+  const addbutoontext= (event) => {
+    setButtontext(event.target.value)
   }
 
   //const classes = useStyles();  
@@ -113,8 +134,8 @@ function Facebook() {
     <Grid container className={classes.root}>
       <Grid item md={6}>
         <div className={classes.FirstTwoInputs}>
-          <TextField className={classes.back} id="standard-basic" label="Page Name" />
-          <TextField className={classes.back} id="standard-textarea" label="Descreption" placeholder="Descreption " multiline />
+          <TextField onChange={adduername} className={classes.back} id="standard-basic" label="Page Name" />
+          <TextField onChange={adddescreption}className={classes.back} id="standard-textarea" label="Descreption" placeholder="Descreption " multiline />
           <div className={classes.back}>
             <Typography color="primary" > choose an image</Typography>
             <input onChange={saveimage} accept="image/*" className={classes.input} id="contained-button-file"
@@ -130,18 +151,21 @@ function Facebook() {
           </div >
           <TextField
             className={classes.textField}
+            onChange ={addshortcta}
             id="filled-multiline-flexible"
-            label="Multiline"
+            label=" Short CTA"
             multiline
             rowsMax={4}
 
             variant="filled"
           />
           <TextField label="Button Text" className={classes.textField}
+          onChange ={addbutoontext}
             margin="normal"
             variant="filled"
           />
           <TextField label="Website Name" className={classes.textField}
+            onChange= {addurl}
             margin="normal"
             variant="filled"
           />
@@ -153,23 +177,23 @@ function Facebook() {
           <div className={classes.header}>
             <Avatar />
             <div style={{ paddingLeft: "5px" }} >
-              <Typography className={classes.username}>Simokhounti</Typography>
+              <Typography className={classes.username}>{username}</Typography>
               <Typography className={classes.sponsored} >Sponsored</Typography>
             </div>
           </div>
           <p className={classes.descreptions} >
-            At w3schools.com you will learn how to make a website.
-             We offer free tutorials in all web development technologies.
+            {descreption}
            </p>
-          <img className={classes.image} src="https://i.pinimg.com/originals/ca/a2/65/caa2654e79e2dc88c6a3c18e1a353452.jpg" />
+          <img className={classes.image} src={url} />
         </div>
         <div>
+         
           <div className={classes.footer}> 
             <div style={{ paddingLeft: "1em" }} >
-              <Typography className={classes.website} >www.google.com</Typography>
-              <Typography className={classes.footertitle}>try it now </Typography>
+              <Typography className={classes.website} >{websitename}</Typography>
+              <Typography className={classes.footertitle}>{shortcta}</Typography>
             </div>
-            <Button className = {classes.buttonAction}> download</Button>
+            <Button className = {classes.buttonAction}>{buttontext}</Button>
           </div>
         </div>
       </Grid>
