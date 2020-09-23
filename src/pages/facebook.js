@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-around",
     margin: "5em",
+    
 
   },
   input: {
@@ -132,7 +133,7 @@ function Facebook() {
   return (
 
     <Grid container className={classes.root}>
-      <Grid item md={6}>
+      <Grid item md={6} xs ={12}>
         <div className={classes.FirstTwoInputs}>
           <TextField onChange={adduername} className={classes.back} id="standard-basic" label="Page Name" />
           <TextField onChange={adddescreption}className={classes.back} id="standard-textarea" label="Descreption" placeholder="Descreption " multiline />
@@ -173,13 +174,14 @@ function Facebook() {
       </Grid>
 
       <Grid className={classes.root3} item md={6}>
-        <div style={{ backgroundColor: "white" }} >
+        <div style={{ backgroundColor: "white",width : "100%" }} >
           <div className={classes.header}>
             <Avatar />
             <div style={{ paddingLeft: "5px" }} >
               <Typography className={classes.username}>{username}</Typography>
               <Typography className={classes.sponsored} >Sponsored</Typography>
             </div>
+            
           </div>
           <p className={classes.descreptions} >
             {descreption}
