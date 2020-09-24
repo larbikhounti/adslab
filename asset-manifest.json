@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/adslab/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/adslab/static/js/main.1d1cc5cf.chunk.js",
-    "main.js.map": "/adslab/static/js/main.1d1cc5cf.chunk.js.map",
+    "main.js": "/adslab/static/js/main.7ce27ccd.chunk.js",
+    "main.js.map": "/adslab/static/js/main.7ce27ccd.chunk.js.map",
     "runtime-main.js": "/adslab/static/js/runtime-main.5a551993.js",
     "runtime-main.js.map": "/adslab/static/js/runtime-main.5a551993.js.map",
     "static/js/2.a9b78d44.chunk.js": "/adslab/static/js/2.a9b78d44.chunk.js",
     "static/js/2.a9b78d44.chunk.js.map": "/adslab/static/js/2.a9b78d44.chunk.js.map",
     "index.html": "/adslab/index.html",
-    "precache-manifest.16bc67ddbf9d12e0ac06821942e1ef53.js": "/adslab/precache-manifest.16bc67ddbf9d12e0ac06821942e1ef53.js",
+    "precache-manifest.38dba2f01ea12da1908c0664efcc8593.js": "/adslab/precache-manifest.38dba2f01ea12da1908c0664efcc8593.js",
     "service-worker.js": "/adslab/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/adslab/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.a9b78d44.chunk.js.LICENSE.txt": "/adslab/static/js/2.a9b78d44.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5a551993.js",
     "static/js/2.a9b78d44.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.1d1cc5cf.chunk.js"
+    "static/js/main.7ce27ccd.chunk.js"
   ]
 }
