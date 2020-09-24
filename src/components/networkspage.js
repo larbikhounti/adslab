@@ -8,7 +8,7 @@ const goTo = (event)=>{
 
  let choose = event.target
  console.log(choose.textContent)
- window.location.href = `${choose.textContent}`;
+ window.location.href = `${process.env.PUBLIC_URL}'/'${choose.textContent}`;
 }
 
 const useStyles = makeStyles((theme) => ({
