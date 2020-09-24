@@ -24,7 +24,9 @@ function App() {
      
 
      <Switch>
-     <Route exact path="/adslab//">
+    
+
+     <Route exact path="/adslab/">
           <WelcomeBody/>
           
           </Route>
@@ -38,6 +40,7 @@ function App() {
           <Route path="/adslab/facebook">
             <Facebook/>
           </Route>
+        
         </Switch>
      </Router>
     </div>
