@@ -35,7 +35,6 @@ function App() {
             <Facebook/>
           </Route>
           </BrowserRouter>
-        
         </Switch>
      </Router>
     </div>

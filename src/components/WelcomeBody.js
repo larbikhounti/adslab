@@ -8,7 +8,7 @@ import Particles from "react-tsparticles";
 
 
 const goToNewtrowk = ()=>{
-  window.location.href = './networks';
+  window.location.href = 'networks';
 }
 
 const useStyles = makeStyles((theme) => ({
