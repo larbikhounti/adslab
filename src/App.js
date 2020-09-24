@@ -24,18 +24,18 @@ function App() {
      
 
      <Switch>
-     <Route exact path="/">
+     <Route exact path="/adslab//">
           <WelcomeBody/>
           
           </Route>
-          <Route exact path="/index">
+          <Route exact path="/adslab/index">
           <WelcomeBody/>
           
           </Route>
-          <Route path="/networks">
+          <Route path="/adslab/networks">
             <Networkspage/>
           </Route>
-          <Route path="/facebook">
+          <Route path="/adslab/facebook">
             <Facebook/>
           </Route>
         </Switch>
