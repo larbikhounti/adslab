@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b20b0fa46b4b3dd4eed1a666ffefab1",
+    "revision": "36c66c037081cf68471b03fcb22f88f2",
     "url": "/adslab/index.html"
   },
   {
-    "revision": "573fc04c6b8483904ba7",
+    "revision": "06fb998d3c234ee4d29c",
     "url": "/adslab/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/adslab/static/js/2.df5267e1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "573fc04c6b8483904ba7",
-    "url": "/adslab/static/js/main.ee8bc82e.chunk.js"
+    "revision": "06fb998d3c234ee4d29c",
+    "url": "/adslab/static/js/main.0a0a1031.chunk.js"
   },
   {
     "revision": "6f9dc3c3f631be236ae3",
