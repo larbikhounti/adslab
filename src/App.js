@@ -8,6 +8,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  BrowserRouter
 } from "react-router-dom";
 
 
@@ -21,25 +22,19 @@ function App() {
     
      
      <Router>
-     
-
-     <Switch>
-    
-
-     <Route exact path="/adslab/">
+       <Switch>
+         
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Route exact path="/">
           <WelcomeBody/>
-          
           </Route>
-          <Route exact path="/adslab/index">
-          <WelcomeBody/>
-          
-          </Route>
-          <Route path="/adslab/networks">
+          <Route path="/networks">
             <Networkspage/>
           </Route>
-          <Route path="/adslab/facebook">
+          <Route path="/facebook">
             <Facebook/>
           </Route>
+          </BrowserRouter>
         
         </Switch>
      </Router>
