@@ -24,7 +24,11 @@ function App() {
      
 
      <Switch>
-          <Route exact path="/">
+     <Route exact path="/">
+          <WelcomeBody/>
+          
+          </Route>
+          <Route exact path="/index">
           <WelcomeBody/>
           
           </Route>
