@@ -31,12 +31,22 @@ const useStyles = makeStyles((theme) => ({
     name :{
         color : "#E63946",
         fontWeight : 700,
+        width: "min-content",
+       /* left: 50%; */
+       margin: "auto",
+       backgroundColor : "white",
+       border: "4px solid #e63946",
+       padding: "10px",
     },
     descreption : {
        alignContent : "center",
        textAlign : "center",
        fontWeight : 700,
-       marginTop : "1em"
+       marginTop : "1em",
+       width: "auto",
+       /* left: 50%; */
+       margin: "auto",
+      // border: "1px solid black",
     },
     Button:{
         marginTop : "2em",
@@ -45,12 +55,6 @@ const useStyles = makeStyles((theme) => ({
         width: "13em",
         color : "#E63946",
         height : "3em"
-    },
-    particles : {
-      zIndex : "0",
-      width : "100%",
-      top: 0,
-      left: 0
     },
     particles : {
       zIndex : "0",
@@ -92,7 +96,7 @@ function WelcomeBody () {
         },
         modes: {
           bubble: {
-            distance: 200,
+            distance: 50,
             duration: 0,
             opacity: 15,
             size: 40,

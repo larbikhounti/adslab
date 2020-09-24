@@ -23,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
     },
     appBar : {
         backgroundColor : '#E63946',
+        zIndex : 1,
+        position : "relative"
         
     }
   }));
