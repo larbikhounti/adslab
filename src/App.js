@@ -25,14 +25,15 @@ function App() {
        <Switch>
          
           <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <Route exact path="/">
-          <WelcomeBody/>
-          </Route>
+         
           <Route path="/networks">
             <Networkspage/>
           </Route>
           <Route path="/facebook">
             <Facebook/>
+          </Route
+          <Route exact path="/">
+          <WelcomeBody/>
           </Route>
           </BrowserRouter>
         </Switch>
