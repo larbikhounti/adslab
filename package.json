@@ -1,8 +1,7 @@
 {
   "name": "adslab",
   "version": "0.1.0",
-  "homepage": "http://larbikhounti.github.io/adslab",
-  "private": true,
+  "homepage": "http://larbikhounti.github.io/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
